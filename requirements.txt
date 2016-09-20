@@ -1,3 +1,4 @@
+bcrypt
 flask
 flask-migrate
 flask-sqlalchemy
