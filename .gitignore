@@ -1,0 +1,5 @@
+*.pyc
+.vagrant
+.env
+.secret_key
+npm-debug.log
