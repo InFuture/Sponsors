@@ -1,4 +1,4 @@
-import bcrypt
+from passlib.hash import bcrypt
 
 def hash_password(password, rounds=10):
 	return bcrypt.encrypt(password, rounds=rounds)
