@@ -1,9 +1,11 @@
+from flask_login import current_user, LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.hybrid import hybrid_property
 
 import util
 
 db = SQLAlchemy()
+login_manager = LoginManager()
 
 class User(db.Model):
 	__tablename__ = "users"
@@ -15,6 +17,11 @@ class User(db.Model):
 		if isinstance(other, User):
 			return self.id == other.id
 		return NotImplemented
+
+	@staticmethod
+	@login_manager.user_loader
+	def get_user_by_id(id):
+		return User.get_by_id(id)
 
 	@hybrid_property
 	def password(self):
