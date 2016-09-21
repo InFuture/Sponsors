@@ -23,6 +23,11 @@ class User(db.Model):
 	def get_user_by_id(id):
 		return User.get_by_id(id)
 
+	@classmethod
+	def get_user_by_email(cls, email):
+		query_results = cls.query.filter(func.lower(User.email) == func.lower(email))
+		return query_results.first() if query_results.count() else None
+
 	@hybrid_property
 	def password(self):
 		return self._password

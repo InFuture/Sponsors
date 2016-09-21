@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, redirect, url_for
 import os
 
 from models import db, login_manager
@@ -12,10 +12,11 @@ db.init_app(app)
 login_manager.init_app(app)
 
 app.register_blueprint(views.base.blueprint)
+app.register_blueprint(views.users.blueprint)
 
 @app.errorhandler(401)
 def login(error):
-	return render_template("base/login.html")
+	return redirect(url_for("users.login"))
 
 app.jinja_env.trim_blocks = True
 app.jinja_env.lstrip_blocks = True

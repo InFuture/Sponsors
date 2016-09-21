@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+	<form id="login_form" method="POST">
+		{{ login_form.csrf_token }}
+		{% for field in login_form if field.id != "csrf_token" %}
+			<p>
+				{{ field.label() }}
+				{{ field() }}
+			</p>
+		{% endfor %}
+		<input type="submit" />
+	</form>
+{% endblock %}
