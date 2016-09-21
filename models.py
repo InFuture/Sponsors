@@ -12,6 +12,7 @@ class User(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	email = db.Column(db.Unicode(128), unique=True)
 	_password = db.Column("password", db.String(length=60))
+	admin = db.Column(db.Boolean, default=False)
 
 	def __eq__(self, other):
 		if isinstance(other, User):
@@ -38,4 +39,3 @@ class User(db.Model):
 
 	def check_password(self, password):
 		return util.verify_password(password, self.password)
-	
