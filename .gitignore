@@ -3,7 +3,10 @@
 .env
 .secret_key
 npm-debug.log
-.sass-cache/
+.sass-cache
 *.css.map
 bower_components/
 node_modules/
+bower_components
+node_modules
+.DS_STORE

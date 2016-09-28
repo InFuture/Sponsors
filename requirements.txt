@@ -1,7 +1,9 @@
-bcrypt
 flask
+flask-login
 flask-migrate
 flask-sqlalchemy
+flask-wtf
 gunicorn
+passlib
 pathlib
 psycopg2
