@@ -390,63 +390,6 @@ html, body {
   background-color: #0C1323;
   overflow: hidden; }
 
-.intro {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background: -webkit-linear-gradient(rgba(1, 23, 58, 0.33), rgba(1, 23, 58, 0.33)), -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/stars.jpeg") no-repeat center center;
-  background: linear-gradient(rgba(1, 23, 58, 0.33), rgba(1, 23, 58, 0.33)), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/stars.jpeg") no-repeat center center;
-  background-size: contain, 100% 100%, 100% 100%, cover; }
-  .intro .content {
-    z-index: 100; }
-  .intro h1 {
-    margin: 0 -1.38em 0.125em auto;
-    letter-spacing: 1.38em; }
-  .intro h4 {
-    margin: 0 -0.66em 1em auto;
-    letter-spacing: 0.66em;
-    opacity: 0.66; }
-  .intro .logo {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 80%;
-    height: auto;
-    text-align: center;
-    opacity: 0.05; }
-    @media screen and (max-width: 61.625em) {
-      .intro .logo {
-        width: 90%; } }
-    @media screen and (max-width: 42.5em) {
-      .intro .logo {
-        width: 95%; } }
-  @media screen and (max-width: 42.5em) {
-    .intro {
-      padding: 0 1em; }
-      .intro h1 {
-        margin: 0 -0.66em 0.125em auto;
-        font-size: 3em;
-        letter-spacing: 0.66em; } }
-
-footer {
-  position: absolute;
-  bottom: 3em;
-  width: 100%;
-  text-align: center; }
-  footer ul.options {
-    margin: 0;
-    padding: 0; }
-    footer ul.options li {
-      display: inline-block;
-      margin: 0.5em 0.75em 0 0.75em; }
-      footer ul.options li h4 {
-        letter-spacing: 0.125em;
-        opacity: 0.66; }
-
 .container {
   width: 80%;
   max-width: 50em;
@@ -459,7 +402,7 @@ footer {
       width: 100%; } }
 
 html {
-  font: 500 normal 100%/1.4 "brandon-grostesque", "futura-pt", "proxima-nova", sans-serif; }
+  font: 500 normal 100%/1.4 "brandon-grotesque", "futura-pt", "proxima-nova", sans-serif; }
   @media screen and (max-width: 100em) {
     html {
       font-size: 90%; } }
@@ -481,7 +424,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  font-family: "brandon-grostesque", "futura-pt", "proxima-nova", sans-serif;
+  font-family: "brandon-grotesque", "futura-pt", "proxima-nova", sans-serif;
   font-weight: 800;
   line-height: 1.6;
   color: #FFFFFF;
@@ -505,7 +448,7 @@ p {
   max-width: 37.5em;
   margin: 0.625em 0;
   padding: 0;
-  font-family: "brandon-grostesque", "futura-pt", "proxima-nova", sans-serif;
+  font-family: "brandon-grotesque", "futura-pt", "proxima-nova", sans-serif;
   font-size: 1.5em;
   font-weight: 500;
   line-height: 1.8; }
@@ -535,29 +478,32 @@ a {
     opacity: 1; }
   to {
     opacity: 0; } }
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 175ms;
+  animation-fill-mode: both; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 button {
-  vertical-align: top;
-  width: 17.5em;
-  height: 3.375em;
-  margin: 0 auto 0 0.25em;
-  padding: 0;
-  font-family: "brandon-grostesque", "futura-pt", "proxima-nova", sans-serif;
-  font-size: 0.875em;
+  display: block;
+  width: 31.25em;
+  height: 3.5em;
+  margin: 0.25em auto;
+  font-family: "brandon-grotesque", "futura-pt", "proxima-nova", sans-serif;
+  font-size: 0.75em;
   font-weight: 800;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.781em;
+  line-height: 3.5em;
   text-align: center;
   text-transform: uppercase;
-  background-color: #FFFFFF;
-  color: #262626;
-  border: 3px solid #FFFFFF;
-  outline: none;
-  -webkit-transition: all, 175ms;
-  -moz-transition: all, 175ms;
-  transition: all, 175ms; }
-  button:hover {
-    background-color: #262626;
-    color: #FFFFFF;
-    border: 3px solid #262626; }
+  background-color: #64B5F6;
+  color: #FFFFFF;
+  border: 0.1875em solid #64B5F6;
+  outline: none; }
 
 form {
   margin: 5em auto 0 auto;
@@ -569,17 +515,16 @@ form {
       margin: 0.75em auto 0 auto; } }
 
 input {
-  vertical-align: top;
-  width: 30em;
-  height: 3.375em;
-  margin: 0 auto;
-  padding: 0 1.75em;
-  font-family: "brandon-grostesque", "futura-pt", "proxima-nova", sans-serif;
-  font-size: 0.875em;
+  display: block;
+  width: 31.25em;
+  height: 3.5em;
+  margin: 0.25em auto;
+  font-family: "brandon-grotesque", "futura-pt", "proxima-nova", sans-serif;
+  font-size: 0.75em;
   font-weight: 800;
-  letter-spacing: 0.25em;
-  line-height: 3em;
-  text-align: left;
+  letter-spacing: 0.781em;
+  line-height: 3.5em;
+  text-align: center;
   text-transform: uppercase;
   background-color: #FFFFFF;
   color: #262626;
@@ -587,116 +532,15 @@ input {
   outline: none; }
 
 ::-webkit-input-placeholder {
-  color: #777777; }
+  color: #B6B6B6; }
 
 :-moz-placeholder {
-  color: #777777; }
+  color: #B6B6B6; }
 
 ::-moz-placeholder {
-  color: #777777; }
+  color: #B6B6B6; }
 
 :-ms-input-placeholder {
-  color: #777777; }
-
-.spam {
-  margin: 1em auto 0 auto;
-  letter-spacing: 0.125em;
-  opacity: 0.33; }
-
-.email-status {
-  margin: 0.75em auto 0 auto;
-  letter-spacing: 0.125em; }
-  .email-status.success {
-    color: #64B5F6; }
-  .email-status.failure {
-    color: #F06292; }
-
-.social {
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-  list-style: none; }
-  .social li {
-    display: inline-block; }
-    .social li span {
-      display: inline-block;
-      width: 1.5em;
-      height: 1.5em;
-      margin: 0 1em;
-      opacity: 0.66;
-      -webkit-transition: all, 175ms;
-      -moz-transition: all, 175ms;
-      transition: all, 175ms; }
-      .social li span:hover {
-        opacity: 0.66; }
-
-span.i-facebook {
-  background: url("../assets/social/facebook.svg") no-repeat center center;
-  background-size: contain; }
-
-span.i-twitter {
-  background: url("../assets/social/twitter.svg") no-repeat center center;
-  background-size: contain; }
-
-span.i-instagram {
-  background: url("../assets/social/instagram.svg") no-repeat center center;
-  background-size: contain; }
-
-span.i-snapchat {
-  background: url("../assets/social/snapchat.svg") no-repeat center center;
-  background-size: contain; }
-
-.parallax {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Chrome/Safari/Opera */
-  -khtml-user-select: none;
-  /* Konqueror */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  z-index: 0; }
-  .parallax h1#nyc {
-    position: absolute;
-    top: 0.5em;
-    right: 1.5em;
-    font-size: 8em;
-    letter-spacing: 0.15em;
-    line-height: 1;
-    text-align: right;
-    opacity: 0.09; }
-  .parallax h1#date {
-    position: absolute;
-    top: 1.125em;
-    right: 1.375em;
-    width: 100%;
-    font-size: 10.5625em;
-    letter-spacing: 0.125em;
-    line-height: 1;
-    text-align: right;
-    opacity: 0.03;
-    white-space: nowrap; }
-    @media screen and (max-width: 61.625em) {
-      .parallax h1#date {
-        display: none; } }
-  .parallax h1#year {
-    position: absolute;
-    left: 0.125em;
-    bottom: -0.5em;
-    font-size: 32em;
-    letter-spacing: 0.05em;
-    line-height: 1;
-    opacity: 0.04; }
+  color: #B6B6B6; }
 
 /*# sourceMappingURL=main.css.map */
