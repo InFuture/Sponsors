@@ -1,4 +1,3 @@
-// start _form.scss
 form {
 	margin: em(80px) auto 0 auto;
 	font-size: em(18px);
@@ -14,15 +13,15 @@ form {
 
 input {
 	display: block;
-	width: em(500px);
-	height: em(56px);
-	margin: em(4px) auto;
+	width: em(608px);
+	height: em(68px);
+	margin: em(6px) auto;
 	// padding: 0 em(18px);
 
 	// vertical-align: top;
 
 	font-family: $font-family--primary;
-	font-size: em(12px);
+	font-size: em(14px);
 	font-weight: $font-weight--title;
 	letter-spacing: 0.781em;
 	line-height: em(56px);
@@ -34,6 +33,7 @@ input {
 
 	border: em(3px) solid $color-white--0;
 	outline: none;
+
 }
 
 @include placeholder(#B6B6B6);
