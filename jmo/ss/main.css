@@ -461,54 +461,6 @@ a {
   color: #262626;
   text-decoration: none; }
 
-.load {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1000000;
-  width: 100%;
-  height: 100%;
-  background: #0C1323;
-  animation-name: fadeOut;
-  animation-delay: 1s;
-  animation-duration: 2s;
-  animation-fill-mode: both; }
-
-@keyframes fadeOut {
-  from {
-    display: none;
-    opacity: 1; }
-  to {
-    opacity: 0; } }
-.fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 175ms;
-  animation-fill-mode: both; }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-.login {
-  width: 100%;
-  height: 100%;
-  text-align: center; }
-  .login h1.title {
-    margin-right: -1.38em;
-    letter-spacing: 1.38em; }
-  .login h3.subtitle {
-    margin-right: -0.625em;
-    font-size: 1.625em;
-    letter-spacing: 0.625em;
-    opacity: 0.66; }
-  .login h6 {
-    margin: 2.25em -0.5em 0 0;
-    letter-spacing: 0.5em;
-    opacity: 0.50; }
-
 button {
   display: block;
   width: 38em;
@@ -527,7 +479,7 @@ button {
   outline: none; }
 
 form {
-  margin: 5em auto 0 auto;
+  margin: 3.75em auto 0 auto;
   font-size: 1.125em; }
   @media screen and (max-width: 42.5em) {
     form button {
@@ -563,5 +515,131 @@ input {
 
 :-ms-input-placeholder {
   color: #B6B6B6; }
+
+.load {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000000;
+  width: 100%;
+  height: 100%;
+  background: #0C1323;
+  animation-name: fadeOut;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: both; }
+
+@keyframes fadeOut {
+  from {
+    display: none;
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 175ms;
+  animation-fill-mode: both; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.login {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: -webkit-linear-gradient(rgba(1, 23, 58, 0.33), rgba(1, 23, 58, 0.33)), -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/stars.jpeg") no-repeat center center;
+  background: linear-gradient(rgba(1, 23, 58, 0.33), rgba(1, 23, 58, 0.33)), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/stars.jpeg") no-repeat center center;
+  background-size: contain, 100% 100%, 100% 100%, cover; }
+  .login .content {
+    z-index: 100; }
+  .login h1.title {
+    margin-right: -1.38em;
+    letter-spacing: 1.38em; }
+  .login h3.subtitle {
+    margin-right: -0.625em;
+    font-size: 1.625em;
+    letter-spacing: 0.625em;
+    opacity: 0.66; }
+  .login h6 {
+    margin: 2.25em -0.5em 0 0;
+    letter-spacing: 0.5em;
+    opacity: 0.50; }
+
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  z-index: 0; }
+  .parallax .logo {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 80%;
+    height: auto;
+    text-align: center;
+    opacity: 0.05; }
+    @media screen and (max-width: 61.625em) {
+      .parallax .logo {
+        width: 90%; } }
+    @media screen and (max-width: 42.5em) {
+      .parallax .logo {
+        width: 95%; } }
+  .parallax h1#ty {
+    position: absolute;
+    top: 0.375em;
+    right: 4vw;
+    margin-right: -0.15em;
+    font-size: 8em;
+    letter-spacing: 0.15em;
+    line-height: 1;
+    text-align: right;
+    opacity: 0.09; }
+  .parallax h1#ty-to {
+    position: absolute;
+    top: 1.0625em;
+    right: 4vw;
+    margin-right: -0.125em;
+    width: 100%;
+    font-size: 10.5625em;
+    letter-spacing: 0.125em;
+    line-height: 1;
+    text-align: right;
+    opacity: 0.03;
+    white-space: nowrap; }
+    @media screen and (max-width: 61.625em) {
+      .parallax h1#ty-to {
+        display: none; } }
+  .parallax h1#year {
+    position: absolute;
+    left: 0.125em;
+    bottom: -0.5em;
+    font-size: 32em;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    opacity: 0.04; }
 
 /*# sourceMappingURL=main.css.map */
