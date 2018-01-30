@@ -1,5 +1,6 @@
 from flask_login import current_user, LoginManager
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import func
 from sqlalchemy.ext.hybrid import hybrid_property
 
 import util
@@ -18,6 +19,10 @@ class User(db.Model):
 		if isinstance(other, User):
 			return self.id == other.id
 		return NotImplemented
+
+	@property
+	def is_active(self):
+		return True
 
 	@staticmethod
 	@login_manager.user_loader
