@@ -5,6 +5,8 @@
 npm-debug.log
 .sass-cache
 *.css.map
+bower_components/
+node_modules/
 bower_components
 node_modules
 .DS_STORE

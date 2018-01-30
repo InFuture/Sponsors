@@ -1,6 +1,5 @@
-// start _form.scss
 form {
-	margin: em(80px) auto 0 auto;
+	margin: em(60px) auto 0 auto;
 	font-size: em(18px);
 
 	@media screen and (max-width: $bp-sm) {
@@ -13,19 +12,20 @@ form {
 }
 
 input {
-	vertical-align: top;
+	display: block;
+	width: em(608px);
+	height: em(68px);
+	margin: em(6px) auto;
+	// padding: 0 em(18px);
 
-	width: em(480px);
-	height: em(54px);
-	margin: 0 auto;
-	padding: 0 em(28px);
+	// vertical-align: top;
 
 	font-family: $font-family--primary;
 	font-size: em(14px);
 	font-weight: $font-weight--title;
-	letter-spacing: 0.25em;
-	line-height: em(48px);
-	text-align: left;
+	letter-spacing: 0.781em;
+	line-height: em(56px);
+	text-align: center;
 	text-transform: uppercase;
 
 	background-color: $color-white--0;
@@ -33,28 +33,7 @@ input {
 
 	border: em(3px) solid $color-white--0;
 	outline: none;
+
 }
 
-@include placeholder($color-black--2);
-
-.spam {
-	margin: em(16px) auto 0 auto;
-	letter-spacing: 0.125em;
-
-	opacity: 0.33;	
-}
-
-.email-status {
-	margin: em(12px) auto 0 auto;
-	letter-spacing: 0.125em;
-
-	&.success {
-		color: $color-blue--primary;
-	}
-
-	&.failure {
-		color: $color-red--primary;
-	}
-}
-
-// end _form.scss
+@include placeholder(#B6B6B6);

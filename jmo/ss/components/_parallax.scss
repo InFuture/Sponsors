@@ -1,0 +1,81 @@
+.parallax {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+	@include noselect;
+
+	z-index: $z-index--parallax;
+
+	.logo {
+		@include vertical-center;
+
+		width: 80%;
+		height: auto;
+
+		text-align: center;
+		opacity: 0.05;
+
+		@media screen and (max-width: $bp-md) {
+			width: 90%;
+		}
+
+		@media screen and (max-width: $bp-sm) {
+			width: 95%;
+		}
+	}
+
+	h1#ty {
+		position: absolute;
+		top: em(6px);
+		right: 4vw;
+
+		margin-right: -0.15em;
+
+		font-size: em(128px);
+		letter-spacing: 0.15em;
+		line-height: 1;
+		text-align: right;
+
+		opacity: 0.09;
+	}
+
+	h1#ty-to {
+		position: absolute;
+		top: em(17px);
+		right: 4vw;
+
+		margin-right: -0.125em;
+
+		width: 100%;
+		font-size: em(169px);
+		letter-spacing: 0.125em;
+		line-height: 1;
+		text-align: right;
+
+		opacity: 0.03;
+		white-space: nowrap;
+
+		@media screen and (max-width: $bp-md) {
+			display: none;
+		}
+	}
+
+	h1#year {
+		position: absolute;
+		left: em(2px);
+		bottom: em(-8px);
+
+		font-size: em(512px);
+		letter-spacing: 0.05em;
+		line-height: 1;
+
+		opacity: 0.04;
+	}
+}

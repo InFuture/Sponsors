@@ -1,33 +1,23 @@
-// start _buttons.scss
-
 button {
-	vertical-align: top;
+	display: block;
+	width: em(608px);
+	height: em(68px);
+	margin: em(16px) auto;
+	// padding: 0 em(18px);
 
-	width: em(280px);
-	height: em(54px);
-	margin: 0 auto 0 em(4px);
-	padding: 0;
+	// vertical-align: top;
 
 	font-family: $font-family--primary;
 	font-size: em(14px);
 	font-weight: $font-weight--title;
-	letter-spacing: 0.5em;
+	letter-spacing: 0.781em;
+	line-height: em(56px);
 	text-align: center;
 	text-transform: uppercase;
 
-	background-color: $color-white--0;
-	color: $color-black--0;
+	background-color: $color-blue--strong;
+	color: $color-white--0;
 
-	border: 3px solid $color-white--0;
+	border: em(3px) solid $color-blue--strong;
 	outline: none;
-
-	@include transition(all, $animation-speed--default);
-
-	&:hover {
-		background-color: $color-black--0;
-		color: $color-white--0;
-		border: 3px solid $color-black--0;
-	}
 }
-
-// end _buttons.scss
